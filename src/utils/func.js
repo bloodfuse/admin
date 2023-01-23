@@ -7,12 +7,29 @@ export const genData = () => {
   if (rand !== 0) {
     for (let i = 0; i <= rand; i++) {
       const j = Math.floor(Math.random() * 2);
+      const b = Math.floor(Math.random() * 6);
       const k = Math.floor(Math.random() * 2);
       const res = {
         uid: fk.datatype.uuid(),
+        name: fk.name.fullName(),
         recipient: fk.name.fullName(),
+        time:fk.datatype.datetime(),
         date: j % 2 === 0 ? fk.date.future() : fk.date.past(),
         donor: fk.name.fullName(),
+        type:
+          b === 0
+            ? "AB"
+            : b === 1
+            ? "AB+"
+            : b === 2
+            ? "AB-"
+            : b === 3
+            ? "O"
+            : b === 4
+            ? "O-"
+            : b === 5
+            ? "O"
+            : "",
         status:
           j % 2 !== 0 ? (k % 2 === 0 ? "Completed" : "Canceled") : "Pending",
       };
@@ -119,3 +136,32 @@ export const genBarValues = () => {
   result = { One, Two };
   return result;
 };
+
+
+export const genTransaction = () => {
+    let result = [];
+  const rand = Math.floor(Math.random() * 101);
+  if (rand !== 0) {
+    for (let i = 0; i <= rand; i++) {
+      const j = Math.floor(Math.random() * 2);
+      const k = Math.floor(Math.random() * 2);
+      const res = {
+        id: fk.datatype.uuid(),
+        name: fk.name.fullName(),
+        amount: fk.finance.amount(),
+        hospital: fk.company.name(),
+        Address: fk.finance.bitcoinAddress(),
+        Receiver: fk.name.fullName(),
+        ReceiverAddress: fk.finance.litecoinAddress(),
+        status:
+          j % 2 !== 0 ? (k % 2 === 0 ? "Completed" : "Canceled") : "Pending",
+      };
+      result.push(res);
+
+      
+      
+    }
+  }
+
+  return result;
+}

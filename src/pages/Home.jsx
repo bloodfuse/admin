@@ -1,4 +1,4 @@
-import HomeMain from "../components/molecules/HomeMain";
+import HomeMain from "../components/templates/HomeMain";
 import SideBar from '../components/molecules/SideBar'
 
 const Home = () => {

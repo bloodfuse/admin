@@ -1,6 +1,6 @@
 import { Images } from "../assets/images";
 import { Envelope, Settings, LogOut } from "../components/atoms/Icons";
-import { genBarValues, genChartData, genData, genDonors, genRequests } from "./func";
+import { genBarValues, genChartData, genData, genDonors, genRequests, genTransaction } from "./func";
 
 export const listItems = [
   { name: "This Month" },
@@ -56,3 +56,5 @@ export const donors = genDonors();
 export const Requests = genRequests();
 
 export const BarValue = genBarValues();
+
+export const Transacts = genTransaction();

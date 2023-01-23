@@ -1,4 +1,4 @@
-import RequestsMain from "../components/molecules/RequestsMain";
+import RequestsMain from "../components/templates/RequestsMain";
 import SideBar from "../components/molecules/SideBar";
 
 const Home = () => {

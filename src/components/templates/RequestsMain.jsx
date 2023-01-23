@@ -1,6 +1,6 @@
 import React from "react";
-import TopBar from "./TopBar";
-import SearchBar from "./SearchBar";
+import TopBar from "../molecules/TopBar";
+import SearchBar from "../molecules/SearchBar";
 import {
   PlusOutline,
   Settings,
@@ -11,7 +11,7 @@ import {
 import Text from "../atoms/Text";
 import RequestTableRow from "../organisms/RequestTableRow";
 import { Requests } from "../../utils/DemoConst";
-import EmptyState from "./EmptyState";
+import EmptyState from "../molecules/EmptyState";
 
 const RequestsMain = () => {
   return (
