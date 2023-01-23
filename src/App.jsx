@@ -5,6 +5,8 @@ import ViewOnDesktop from "./components/ViewOnDesktop";
 
 const LazyHome = lazy(() => import("./pages/Home"));
 const LazyRequests = lazy(() => import("./pages/Requests"));
+const LazyTransaction=lazy(()=>import("./pages/Transaction"))
+const LazyHistory=lazy(()=>import("./pages/Histoy"))
 
 const App = () => {
   const client = new ClientJS();
@@ -17,6 +19,9 @@ const App = () => {
             <Route path="/" element={<LazyHome />} />
             <Route path="/dashboard" element={<LazyHome />} />
             <Route path="/requests" element={<LazyRequests />} />
+            <Route path="/transaction" element={<LazyTransaction />} />
+            <Route path="/history" element={<LazyHistory/> } />
+
           </Routes>
         </Suspense>
       ) : (

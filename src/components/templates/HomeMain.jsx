@@ -4,10 +4,10 @@ import Heading from "../atoms/Heading";
 import Text from "../atoms/Text";
 import Chart from "../organisms/Chart";
 import MiniTable from "../organisms/MiniTable";
-import EmptyState from "./EmptyState";
-import Select from "./Select";
-import TitleHeader from "./TitleHeader";
-import TopBar from "./TopBar";
+import EmptyState from "../molecules/EmptyState";
+import Select from "../molecules/Select";
+import TitleHeader from "../molecules/TitleHeader";
+import TopBar from "../molecules/TopBar";
 import {
   listItems,
   listItems2,
@@ -18,7 +18,7 @@ import {
 } from "../../utils/DemoConst";
 import DonorTable from "../organisms/DonorTable";
 
-const LazyBarChart = lazy(() => import("./BarChart"));
+const LazyBarChart = lazy(() => import("../molecules/BarChart"));
 
 const HomeSection = () => {
   return (
