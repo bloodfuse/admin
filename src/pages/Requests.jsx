@@ -1,12 +1,11 @@
 import RequestsMain from "../components/templates/RequestsMain";
-import SideBar from "../components/molecules/SideBar";
+import Layout from "../components/templates/Layout";
 
 const Home = () => {
   return (
-    <div className="flex w-full h-screen">
-      <SideBar />
+    <Layout>
       <RequestsMain />
-    </div>
+    </Layout>
   );
 };
 
