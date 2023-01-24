@@ -6,7 +6,7 @@ import ViewOnDesktop from "./components/ViewOnDesktop";
 const LazyHome = lazy(() => import("./pages/Home"));
 const LazyRequests = lazy(() => import("./pages/Requests"));
 const LazyTransaction=lazy(()=>import("./pages/Transaction"))
-const LazyHistory=lazy(()=>import("./pages/Histoy"))
+const LazyHistory = lazy(() => import("./pages/History"));
 
 const App = () => {
   const client = new ClientJS();
@@ -14,7 +14,7 @@ const App = () => {
   return (
     <>
       {!isMobile && window.innerWidth >= 1024 ? (
-        <Suspense falllback={<h4>Loading Page</h4>}>
+        <Suspense fallback={<h4>Loading Page</h4>}>
           <Routes>
             <Route path="/" element={<LazyHome />} />
             <Route path="/dashboard" element={<LazyHome />} />

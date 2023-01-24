@@ -1,13 +1,12 @@
 import HomeMain from "../components/templates/HomeMain";
-import SideBar from '../components/molecules/SideBar'
+import Layout from "../components/templates/Layout";
 
 const Home = () => {
   return (
-    <div className="flex w-full h-screen">
-      <SideBar />
+    <Layout>
       <HomeMain />
-    </div>
+    </Layout>
   );
-}
+};
 
-export default Home
+export default Home;
